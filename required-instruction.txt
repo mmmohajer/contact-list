@@ -1,0 +1,53 @@
+npm install react react-dom
+
+npm install webpack webpack-cli webpack-dev-server
+
+npm install @babel/core @babel/preset-env @babel/preset-react babel-loader
+
+"dev": "webpack serve"
+
+npm run dev
+
+if (module.hot) {
+	module.hot.accept()
+}
+
+npm install react-router-dom
+
+npm install axios
+
+Redirect to new url:
+import { withRouter } from 'react-router-dom'
+export default withRouter(CreateContact)
+const CreateContact = ({ history }) => {
+	history.push(`/contact/${response.data}`)
+}
+
+npm install immer use-immer
+
+npm i react-transition-group
+
+const headers = {
+			'Content-Type': 'multipart/form-data',
+  			'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJjLXN0YXJ0dXAtYXNzZXNzbWVudCIsInN1YiI6Ijg3IiwiZXhwIjoxNjE0MDg3ODY3fQ.pkAqTfIGf1lpZ1taMmUUZzZtdjrxvRumzgr3h73c2pk'
+		}
+
+		let newUser = new FormData();
+
+		newUser.append('name', name)
+		newUser.append('username', username)
+		newUser.append('email', email)
+		newUser.append('password', password)
+
+		try {
+			const response = await Axios.post("/users/create",  newUser, { headers })
+			if (response.data) {
+				console.log(response.data)
+			} else {
+				console.log("Invalid username and password")
+			}
+		} catch (err) {
+			console.log(err)
+		}
+
+npm install --save-dev style-loader css-loader
